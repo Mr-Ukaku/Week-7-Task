@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background: rgb(197, 171, 171);
+}
+.container{
+    background: white;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgb(34, 3, 3);
+}
+.image-container{
+    position: relative;
+}
+img{
+    width: 660px;
+    height: 460px;
+    display: none;
+    position: relative;
+}
+.active{
+    display: block;
+}
+.dot-container{
+    width: 250px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+.dot-container button{
+    height: 15px;
+    width: 50px;
+    border-radius: 10%;
+    border: 3px solid rgb(104, 49, 49);
+    background-color: transparent;
+}
+.dot-container button:nth-child(1){
+    background-color: rgb(114, 81, 81);
+
+}
+#prev, #next{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background: rgb(104, 49, 49);
+    color: #ffffff;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    margin: auto;
+    font-weight: bolder;
+    opacity: 0;
+    transition: opacity .35s ease;
+    
+}
+#prev{
+    left: 5px;
+}
+#next{
+    right: 5px;
+}
+
+.image-container:hover #prev, .image-container:hover #next {
+    opacity: 1;
+}
